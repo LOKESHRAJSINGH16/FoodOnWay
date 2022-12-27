@@ -1,0 +1,101 @@
+extends base.pug
+block stylesheets
+    link(rel="stylesheet" , href="./css/homepage.css")
+block header
+    .showcase
+        include homepageHeader.pug
+        .showcase-content
+            h1 MEAL PLANS.
+            h1
+                | FOR 
+                span#changing-text
+            .showcase-buttons
+                a.btn(href="/plans") Book Now
+                a.btn-fade(href="/#features") Show Me More
+
+block content
+    #features.section.features
+        .section-heading
+            h1 AWESOME FEATURES
+        hr
+        .section-body
+            .card
+                i.far.fa-calendar-plus.icon
+                .card-heading
+                    h2 365 DAYS/YEAR
+                .card-info
+                    | Never cook again! We really mean that. Our subscription plans
+                    | include up to 365 days/year coverage. You can also choose to order
+                    | more flexibly if that's your style.
+            .card
+                i.fas.fa-shipping-fast.icon
+                .card-heading
+                    h2 30 MINUTES OR FREE
+                .card-info
+                    | You're only twenty minutes away from your delicious and super
+                    | healthy meals delivered right to your home. We work with the best
+                    | chefs in each town to ensure that you're 100% happy.
+            .card
+                i.fas.fa-carrot.icon
+                .card-heading
+                    h2 100% ORGANIC
+                .card-info
+                    | All our vegetables are fresh, organic and local. Animals are raised
+                    | without added hormones or antibiotics. Good for your health, the
+                    | environment, and it also tastes better!
+    
+    #reviews.section.reviews
+        .section-heading
+            h1 REVIEWS
+        hr
+        .section-body
+            each review in reviews
+                include reviewCard.pug
+
+
+    #pricing.section.pricing
+        .section-heading
+            h1 START EATING HEALTHY TODAY
+        hr
+        .section-body
+            each plan in plans
+                include planCard.pug
+        .view-menu
+            a(href="/plans") View Full Menu
+    
+    #contact.section.contact
+        .section-heading
+            h1 CONTACT US
+        hr
+        .section-body
+            .contact-img
+                img(src="./images/contact-us.png", alt="")
+            .contact-form
+                form
+                    .form-input
+                        label(for='') Name
+                        input#name(type='text')
+                    .form-input
+                        label(for='') Email*
+                        input#email(type='text' required)
+                    .form-input
+                        label(for='') How did you find us?
+                        select#find(name='')
+                            option(value='Friends') Friends
+                            option(value='Advertisement') Advertisement
+                            option(value='Other') Other
+                    .form-input
+                        label(for='') Drop an equiry/feedback*
+                        textarea#feedback(name='' required)
+                    .form-input.accept-terms
+                        .checkbox
+                            input#checkbox(type='checkbox' required)
+                        .conditions
+                            | I have read and agree with all the Privacy Policy and Terms &
+                            | Conditions.
+                    button.form-submit.btn SEND MESSAGE
+                .message
+
+append scripts
+    script(src="./js/buyPlan.js") 
+    script(src="./js/contactUs.js") 

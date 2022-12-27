@@ -1,0 +1,137 @@
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+  font-family: "Lato", sans-serif;
+  scroll-behavior: smooth;
+}
+html {
+  min-height: 100%;
+}
+hr {
+  color: #f63854;
+  width: 25%;
+  margin: 1% auto;
+  border: 1.5px solid #f63854;
+  background-color: #f63854;
+}
+p {
+  padding: 3% 0;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+  /* transition: ease-in; */
+}
+i {
+  cursor: pointer;
+}
+ul {
+  list-style: none;
+}
+textarea{
+  resize: none;
+}
+
+/* NAVBAR */
+.navbar {
+}
+.navlinks {
+  display: flex;
+  justify-content: flex-end;
+}
+.link {
+  margin-right: 3%;
+  padding: 1%;
+  color: rgb(244, 244, 244);
+  text-transform: uppercase;
+}
+.link:hover {
+  border-bottom: 2px solid #f63854;
+  /* outline: none; */
+  /* margin-top: -1px; */
+  margin-bottom: -1px;
+  padding-top: -1px;
+  padding-bottom: -1px;
+}
+.fixed {
+  background: #1e2022;
+  position: fixed;
+  width: 100%;
+  z-index: 2;
+}
+.fixed1 {
+  background: #1e2022;
+  /* position: fixed; */
+  width: 100%;
+}
+
+.fixed1 a {
+  color: #f63854;
+}
+.fixed a {
+  color: #f63854;
+}
+
+/* FOOTER */
+footer {
+  /* position: absolute; */
+  background-color: #000000;
+  /* height: 5%; */
+  text-align: center;
+  padding: 2%;
+  width: 100%;
+}
+footer i {
+  font-size: 2rem;
+  color: #f63854;
+  margin-right: 2%;
+}
+footer p {
+  color: #808080;
+  padding-top: 2%;
+  padding-bottom: 0;
+}
+
+.hide {
+  display: none;
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f63854;
+  color: white;
+  height: 50px;
+  border-radius: 30px;
+  padding: 8px;
+  cursor: pointer;
+  transition: transform 0.3s;
+  width: 40%;
+  border: none;
+}
+
+.btn-fade {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #f63854;
+  color: #f63854;
+  height: 50px;
+  border-radius: 30px;
+  padding: 8px;
+  cursor: pointer;
+  transition: transform 0.3s;
+  width: 50%;
+}
+
+.btn-fade:hover {
+  transform: scale(1.2);
+  background: #f63854;
+  color: white;
+}
+
+.btn:hover {
+  transform: scale(1.2);
+}
